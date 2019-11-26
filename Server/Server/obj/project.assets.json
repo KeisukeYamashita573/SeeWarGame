@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\network\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "D:\\Documents\\network\\SeeWarGame\\Server\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\Documents\\network\\Server\\Server\\Server.csproj",
+      "projectPath": "D:\\Documents\\network\\SeeWarGame\\Server\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\yamak\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\network\\Server\\Server\\obj\\",
+      "outputPath": "D:\\Documents\\network\\SeeWarGame\\Server\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

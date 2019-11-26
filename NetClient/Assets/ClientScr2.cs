@@ -6,18 +6,19 @@ using System;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 
 public class ClientScr2 : MonoBehaviour
 {
+    [SerializeField]
+    private InputField ipField = default;
     [SerializeField]
     private InputField field = default;
 
     public void OnSendButton()
     {
         if (field.text == null || field.text.Length == 0) return;
-        var ipOrHost = "192.168.11.37";
+        var ipOrHost = ipField.text;
         var port = 2001;
 
         var tcp = new TcpClient(ipOrHost, port);
