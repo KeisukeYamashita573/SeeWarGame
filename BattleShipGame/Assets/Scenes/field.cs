@@ -25,8 +25,9 @@ public class field : MonoBehaviour
 			}
 		}
 
-		// 駒とりあえずひとつ
-		GameObject.Instantiate(koma, new Vector3(0.75f + 4.25f, -0.75f, 0), Quaternion.Euler(0, 0, 0));
+        // 駒とりあえずひとつ
+        var hune = GameObject.Instantiate(koma, new Vector3(0.75f + 4.25f, -0.75f, 0), Quaternion.Euler(0, 0, 0));
+        hune.GetComponent<koma>().SetID = id;
     }
 
     // Update is called once per frame
