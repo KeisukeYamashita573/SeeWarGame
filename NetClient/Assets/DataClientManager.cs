@@ -8,23 +8,23 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 
-public class ClientScr2 : MonoBehaviour
+public class DataClientManager : MonoBehaviour
 {
     [SerializeField]
     private InputField ipField = default;
     [SerializeField]
-    private InputField field = default;
+    private GameObject cube = default;
 
     public void OnSendButton()
     {
-        if (field.text == null || field.text.Length == 0) return;
         var ipOrHost = ipField.text;
         var port = 2001;
 
         var tcp = new TcpClient(ipOrHost, port);
         var ns = tcp.GetStream();
+
         Encoding enc = Encoding.UTF8;
-        byte[] sendBytes = enc.GetBytes(field.text + '\n');
+        byte[] sendBytes = ConvertVector3ToByteArray(cube.transform.position);
         ns.Write(sendBytes, 0, sendBytes.Length);
 
         MemoryStream ms = new MemoryStream();
@@ -44,5 +44,14 @@ public class ClientScr2 : MonoBehaviour
 
         ns.Close();
         tcp.Close();
+    }
+
+    private byte[] ConvertVector3ToByteArray(Vector3 pos)
+    {
+        byte[] tmp = new byte[3];
+        tmp[0] = (byte)pos.x;
+        tmp[1] = (byte)pos.y;
+        tmp[2] = (byte)pos.z;
+        return tmp;
     }
 }
