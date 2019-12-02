@@ -21,10 +21,14 @@ public class koma : MonoBehaviour
     {
         set { fieldID = value; }
     }
+	public Vector3 SetPos
+	{
+		set { this.transform.position = value; }
+	}
 
-    public void Return()
+	public void Return()
 	{
 		Debug.Log("天ちゃんprpr");
-        Debug.Log("komaid:" + fieldID);
+        Debug.Log("komaID:" + fieldID);
     }
 }

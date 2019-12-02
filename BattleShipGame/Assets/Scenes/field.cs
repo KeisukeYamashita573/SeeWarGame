@@ -19,7 +19,7 @@ public class field : MonoBehaviour
 		{
 			for(int x = 0; x < 10; ++x)
 			{
-				var obj = GameObject.Instantiate(masu, new Vector3(x*0.9f+0.75f+4.25f, -y*0.9f-0.75f, 1),Quaternion.Euler(0,0,0));
+				var obj = GameObject.Instantiate(masu, new Vector3(x*0.9f+0.75f+4.25f, -y*0.9f-0.75f, 1),Quaternion.Euler(0, 0, 0));
 				obj.GetComponent<button>().SetID = id;
 				++id;
 			}
