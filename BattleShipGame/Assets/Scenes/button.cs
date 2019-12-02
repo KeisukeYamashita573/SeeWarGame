@@ -30,6 +30,10 @@ public class button : MonoBehaviour
 	{
 		set{id = value;}
 	}
+	public int GetID
+	{
+		get { return this.id; }
+	}
 
 	public Vector3 GetPos
 	{
