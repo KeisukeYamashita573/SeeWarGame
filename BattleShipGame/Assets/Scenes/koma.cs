@@ -23,6 +23,10 @@ public class koma : MonoBehaviour
     {
         set { fieldID = value; }
     }
+    public int GetFieldID
+    {
+        get { return fieldID; }
+    }
 	// フィールドの位置へ移動する
 	public Vector3 SetPos
 	{

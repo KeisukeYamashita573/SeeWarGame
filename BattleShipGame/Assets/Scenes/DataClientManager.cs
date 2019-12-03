@@ -27,7 +27,7 @@ public class DataClientManager : MonoBehaviour
 
         Encoding enc = Encoding.UTF8;
 		byte[] sendBytes = new byte[2];
-		sendBytes[0] = (byte)cube.GetComponent<button>().GetID;
+		sendBytes[0] = (byte)cube.GetComponent<koma>().GetFieldID;
 		sendBytes[1] = (byte)'\n';
         ns.Write(sendBytes, 0, sendBytes.Length);
 
