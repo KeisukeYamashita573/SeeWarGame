@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class koma : MonoBehaviour
 {
-	int fieldID;
+	[SerializeField]
+	int fieldID;	// 自身のいる場所
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +18,12 @@ public class koma : MonoBehaviour
     {
         
     }
-    public int SetID
+	// フィールドの位置へ移動する
+    public int SetFieldID
     {
         set { fieldID = value; }
     }
+	// フィールドの位置へ移動する
 	public Vector3 SetPos
 	{
 		set { this.transform.position = value; }
@@ -29,6 +32,6 @@ public class koma : MonoBehaviour
 	public void Return()
 	{
 		Debug.Log("天ちゃんprpr");
-        Debug.Log("komaID:" + fieldID);
+        Debug.Log("どこにいる:" + fieldID);
     }
 }
