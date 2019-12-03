@@ -33,6 +33,7 @@ public class ray : MonoBehaviour
 				else
 				{
 					hit.collider.GetComponent<button>().Return();
+					GameObject.FindObjectOfType<koma>().SetFieldID = hit.collider.GetComponent<button>().GetID;
 					GameObject.FindObjectOfType<koma>().SetPos = hit.collider.GetComponent<button>().GetPos;
 				}
 				
