@@ -26,10 +26,10 @@ public class DataClientManager : MonoBehaviour
         var ns = tcp.GetStream();
 
         Encoding enc = Encoding.UTF8;
-		byte[] sendBytes = new byte[2];
-		sendBytes[0] = (byte)cube.GetComponent<koma>().GetFieldID;
-		sendBytes[1] = (byte)'\n';
-        ns.Write(sendBytes, 0, sendBytes.Length);
+		string id = cube.GetComponent<koma>().GetFieldID.ToString() + '\n';
+		byte[]  sendBytes = enc.GetBytes(id);
+
+		ns.Write(sendBytes, 0, sendBytes.Length);
 
         MemoryStream ms = new MemoryStream();
         byte[] resBytes = new byte[256];
@@ -44,6 +44,7 @@ public class DataClientManager : MonoBehaviour
             ms.Write(resBytes, 0, resSize);
         } while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
         string resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
+		Debug.Log(resMsg);
         ms.Close();
 
         ns.Close();
