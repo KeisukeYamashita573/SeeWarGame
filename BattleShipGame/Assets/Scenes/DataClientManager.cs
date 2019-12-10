@@ -45,7 +45,15 @@ public class DataClientManager : MonoBehaviour
         } while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
         string resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
 		Debug.Log(resMsg);
-        ms.Close();
+		foreach(GameObject masu in GameObject.FindObjectOfType<field>().GetMasuLists)
+		{
+			if(masu.GetComponent<button>().GetID == int.Parse(resMsg))
+			{
+				GameObject.FindObjectOfType<koma>().SetPos = masu.GetComponent<button>().GetPos;
+				break;
+			}
+		}
+		ms.Close();
 
         ns.Close();
         tcp.Close();

@@ -25,7 +25,6 @@ public class ray : MonoBehaviour
 			if (Physics.Raycast(ray, out hit))
 			{
 				clickedGameObject = hit.collider.gameObject;
-				//hit.collider.GetComponent<button>().Return();
 				if (hit.collider.GetComponent<koma>() != null)
 				{
 					hit.collider.GetComponent<koma>().Return();
@@ -34,7 +33,6 @@ public class ray : MonoBehaviour
 				{
 					hit.collider.GetComponent<button>().Return();
 					GameObject.FindObjectOfType<koma>().SetFieldID = hit.collider.GetComponent<button>().GetID;
-					GameObject.FindObjectOfType<koma>().SetPos = hit.collider.GetComponent<button>().GetPos;
 				}
 				
 			}
