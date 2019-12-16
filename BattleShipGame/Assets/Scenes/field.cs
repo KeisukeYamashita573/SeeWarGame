@@ -8,10 +8,13 @@ public class field : MonoBehaviour
 	private GameObject masu;
 	[SerializeField]
 	private GameObject koma;
-    void Start()
+
+	private ArrayList masuLists = new ArrayList();
+	void Start()
     {
 		int id = 0;
 		var sz = masu.GetComponent<SpriteRenderer>().sprite.texture;
+		
 		Debug.Log(sz.width);
 		
 		// マス目の作成
@@ -22,6 +25,7 @@ public class field : MonoBehaviour
 				var obj = GameObject.Instantiate(masu, new Vector3(x*0.9f+0.75f+4.25f, -y*0.9f-0.75f, 1),Quaternion.Euler(0, 0, 0));
 				obj.GetComponent<button>().SetID = id;
 				++id;
+				masuLists.Add(obj);
 			}
 		}
 
@@ -34,4 +38,9 @@ public class field : MonoBehaviour
     void Update()
     {
     }
+
+	public ArrayList GetMasuLists
+	{
+		get { return masuLists; }
+	}
 }
