@@ -15,6 +15,10 @@ public class DataClientManager : MonoBehaviour
 
     private GameObject cube = default;
 
+    public void Start()
+    {
+        ipField.text = "172.31.5.0";
+    }
 
 	public void OnSendButton()
     {
