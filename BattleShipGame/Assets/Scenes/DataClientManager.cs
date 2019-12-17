@@ -67,14 +67,14 @@ public class DataClientManager : MonoBehaviour
 
     public void CreatePlayer()
     {
-        var tcp = new TcpClient(playerNameField.text, port);
+        var tcp = new TcpClient(ipField.text, port);
         var ns = tcp.GetStream();
 
         Encoding enc = Encoding.UTF8;
         string sendData = "CreatePlayer:" + playerNameField.text + '\n';
         byte[] sendBytes = enc.GetBytes(sendData);
 
-        ns.Write(sendData, 0, sendData.Length);
+        ns.Write(sendBytes, 0, sendBytes.Length);
 
         MemoryStream ms = new MemoryStream();
         byte[] resBytes = new byte[256];
@@ -86,10 +86,10 @@ public class DataClientManager : MonoBehaviour
             {
                 break;
             }
-            ns.Write(resBytes, 0, resSize);
+            ms.Write(resBytes, 0, resSize);
         } while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
         string resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
-
+        Debug.Log(resMsg);
         ms.Close();
         ns.Close();
         tcp.Close();
@@ -97,14 +97,14 @@ public class DataClientManager : MonoBehaviour
 
     public void LoginPlayer()
     {
-        var tcp = new TcpClient(playerNameField.text, port);
+        var tcp = new TcpClient(ipField.text, port);
         var ns = tcp.GetStream();
 
         Encoding enc = Encoding.UTF8;
         string sendData = "LogInPlayer:" + playerNameField.text + '\n';
         byte[] sendBytes = enc.GetBytes(sendData);
 
-        ns.Write(sendData, 0, sendData.Length);
+        ns.Write(sendBytes, 0, sendBytes.Length);
 
         MemoryStream ms = new MemoryStream();
         byte[] resBytes = new byte[256];
@@ -116,7 +116,7 @@ public class DataClientManager : MonoBehaviour
             {
                 break;
             }
-            ns.Write(resBytes, 0, resSize);
+            ms.Write(resBytes, 0, resSize);
         } while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
         string resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
 
