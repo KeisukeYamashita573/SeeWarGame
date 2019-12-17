@@ -12,8 +12,11 @@ public class DataClientManager : MonoBehaviour
 {
     [SerializeField]
     private InputField ipField = default;
+    [SerializeField]
+    private InputField playerNameField = default;
 
     private GameObject cube = default;
+    private int port = 2001;
 
     public void Start()
     {
@@ -24,7 +27,6 @@ public class DataClientManager : MonoBehaviour
     {
 		cube = GameObject.FindGameObjectWithTag("wahu-");
 		var ipOrHost = ipField.text;
-        var port = 2001;
 
         var tcp = new TcpClient(ipOrHost, port);
         var ns = tcp.GetStream();
@@ -63,13 +65,63 @@ public class DataClientManager : MonoBehaviour
         tcp.Close();
     }
 
-    private byte[] ConvertVector3ToByteArray(Vector3 pos)
+    public void CreatePlayer()
     {
-        byte[] tmp = new byte[4];
-        tmp[0] = (byte)pos.x;
-        tmp[1] = (byte)pos.y;
-        tmp[2] = (byte)pos.z;
-		tmp[3] = (byte)'\n';
-        return tmp;
+        var tcp = new TcpClient(playerNameField.text, port);
+        var ns = tcp.GetStream();
+
+        Encoding enc = Encoding.UTF8;
+        string sendData = "CreatePlayer:" + playerNameField.text + '\n';
+        byte[] sendBytes = enc.GetBytes(sendData);
+
+        ns.Write(sendData, 0, sendData.Length);
+
+        MemoryStream ms = new MemoryStream();
+        byte[] resBytes = new byte[256];
+        int resSize = 0;
+        do
+        {
+            resSize = ns.Read(resBytes, 0, resBytes.Length);
+            if (resSize == 0)
+            {
+                break;
+            }
+            ns.Write(resBytes, 0, resSize);
+        } while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
+        string resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
+
+        ms.Close();
+        ns.Close();
+        tcp.Close();
+    }
+
+    public void LoginPlayer()
+    {
+        var tcp = new TcpClient(playerNameField.text, port);
+        var ns = tcp.GetStream();
+
+        Encoding enc = Encoding.UTF8;
+        string sendData = "LogInPlayer:" + playerNameField.text + '\n';
+        byte[] sendBytes = enc.GetBytes(sendData);
+
+        ns.Write(sendData, 0, sendData.Length);
+
+        MemoryStream ms = new MemoryStream();
+        byte[] resBytes = new byte[256];
+        int resSize = 0;
+        do
+        {
+            resSize = ns.Read(resBytes, 0, resBytes.Length);
+            if (resSize == 0)
+            {
+                break;
+            }
+            ns.Write(resBytes, 0, resSize);
+        } while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
+        string resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
+
+        ms.Close();
+        ns.Close();
+        tcp.Close();
     }
 }
