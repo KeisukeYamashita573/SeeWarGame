@@ -13,6 +13,8 @@ public class userName : MonoBehaviour
     private GameObject login = default;
     [SerializeField]
     private GameObject newMake = default;
+    [SerializeField]
+    private GameObject userMng = default;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +28,10 @@ public class userName : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            if(nameField.text == "a")
+            //  ユーザーネームが入力されていれば通す(空白は通さない)
+            if(!string.IsNullOrWhiteSpace(nameField.text))
             {
-                //SceneManager.LoadScene("GamePlaying");
+                userMng.GetComponent<user>().SetUserName(nameField.text);
                 login.SetActive(true);
                 newMake.SetActive(true);
                 nameField.gameObject.SetActive(false);
