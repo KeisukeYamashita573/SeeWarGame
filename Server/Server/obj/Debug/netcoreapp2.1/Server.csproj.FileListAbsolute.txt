@@ -20,3 +20,14 @@ D:\Documents\network\Server\Server\obj\Debug\netcoreapp2.1\Server.AssemblyInfoIn
 D:\Documents\network\Server\Server\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
 D:\Documents\network\Server\Server\obj\Debug\netcoreapp2.1\Server.dll
 D:\Documents\network\Server\Server\obj\Debug\netcoreapp2.1\Server.pdb
+D:\Documents\network\SeeWarGame\Server\Server\bin\Debug\netcoreapp2.1\Server.deps.json
+D:\Documents\network\SeeWarGame\Server\Server\bin\Debug\netcoreapp2.1\Server.runtimeconfig.json
+D:\Documents\network\SeeWarGame\Server\Server\bin\Debug\netcoreapp2.1\Server.runtimeconfig.dev.json
+D:\Documents\network\SeeWarGame\Server\Server\bin\Debug\netcoreapp2.1\Server.dll
+D:\Documents\network\SeeWarGame\Server\Server\bin\Debug\netcoreapp2.1\Server.pdb
+D:\Documents\network\SeeWarGame\Server\Server\obj\Debug\netcoreapp2.1\Server.csprojAssemblyReference.cache
+D:\Documents\network\SeeWarGame\Server\Server\obj\Debug\netcoreapp2.1\Server.csproj.CoreCompileInputs.cache
+D:\Documents\network\SeeWarGame\Server\Server\obj\Debug\netcoreapp2.1\Server.AssemblyInfoInputs.cache
+D:\Documents\network\SeeWarGame\Server\Server\obj\Debug\netcoreapp2.1\Server.AssemblyInfo.cs
+D:\Documents\network\SeeWarGame\Server\Server\obj\Debug\netcoreapp2.1\Server.dll
+D:\Documents\network\SeeWarGame\Server\Server\obj\Debug\netcoreapp2.1\Server.pdb

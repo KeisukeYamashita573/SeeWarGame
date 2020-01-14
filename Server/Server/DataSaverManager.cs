@@ -149,15 +149,16 @@ namespace Server
             IPAddress ipAdd = IPAddress.Parse(ipString);
             // first IPアドレスの下3桁、second プレイヤー名
             Dictionary<string, string> AddressToPlayer = new Dictionary<string, string>();
-            if (GetPlDataFromJson("PlayerData") == null)
-            {
-                AddressToPlayer = GetPlDataFromJson("PlayerData").PlLists;
-            }
-            else
-            {
-                CreatePlData(AddressToPlayer);
-            }
-            
+            //if (GetPlDataFromJson("PlayerData") == null)
+            //{
+            //    //AddressToPlayer = GetPlDataFromJson("PlayerData").PlLists;
+            //}
+            //else
+            //{
+            //    CreatePlData(AddressToPlayer);
+            //}
+            //CreatePlData(AddressToPlayer);
+
             //ホスト名からIPアドレスを取得する時は、次のようにする
             //string host = "localhost";
             //System.Net.IPAddress ipAdd =
