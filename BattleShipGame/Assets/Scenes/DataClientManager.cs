@@ -20,7 +20,7 @@ public class DataClientManager : MonoBehaviour
 
     public void Start()
     {
-        ipField.text = "172.31.5.0";
+        ipField.text = "172.31.5.7";
     }
 
 	public void OnSendButton()

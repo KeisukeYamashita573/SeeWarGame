@@ -601,7 +601,7 @@ MonoBehaviour:
   nameField: {fileID: 390310185}
   login: {fileID: 1638084052}
   newMake: {fileID: 2025223631}
-  userMng: {fileID: 0}
+  userMng: {fileID: 1161322725}
 --- !u!1 &554158940
 GameObject:
   m_ObjectHideFlags: 0
