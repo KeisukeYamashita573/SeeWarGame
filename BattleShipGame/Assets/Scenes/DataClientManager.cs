@@ -53,7 +53,7 @@ public class DataClientManager : MonoBehaviour
 		Debug.Log(resMsg);
 		foreach(GameObject masu in GameObject.FindObjectOfType<field>().GetMasuLists)
 		{
-			if(masu.GetComponent<button>().GetID == int.Parse(resMsg))
+			if(masu.GetComponent<button>().GetID == int.Parse(resMsg.Substring(resMsg.IndexOf(":") + 1)))
 			{
 				GameObject.FindObjectOfType<koma>().SetPos = masu.GetComponent<button>().GetPos;
 				break;
