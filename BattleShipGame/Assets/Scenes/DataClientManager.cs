@@ -18,7 +18,16 @@ public class DataClientManager : MonoBehaviour
     private GameObject cube = default;
     private int port = 2001;
 
-    public void Start()
+	private string ipOrHost = "";
+	private TcpClient tcp;
+	private NetworkStream ns;
+	private Encoding enc;
+	private string id;
+	private byte[] resBytes;
+	private MemoryStream ms;
+	private int resSize;
+	private string resMsg;
+	public void Start()
     {
         ipField.text = "172.31.5.7";
     }
@@ -26,44 +35,43 @@ public class DataClientManager : MonoBehaviour
 	public void OnSendButton()
     {
 		cube = GameObject.FindGameObjectWithTag("wahu-");
-		var ipOrHost = ipField.text;
+		ipOrHost = ipField.text;
 
-        var tcp = new TcpClient(ipOrHost, port);
-        var ns = tcp.GetStream();
+		tcp = new TcpClient(ipOrHost, port);
+		ns = tcp.GetStream();
 
-        Encoding enc = Encoding.UTF8;
-		string id = cube.GetComponent<koma>().GetFieldID.ToString() + '\n';
-		byte[]  sendBytes = enc.GetBytes(id);
+		enc = Encoding.UTF8;
+		id = cube.GetComponent<koma>().GetFieldID.ToString() + '\n';
+		byte[] sendBytes = enc.GetBytes(id);
 
 		ns.Write(sendBytes, 0, sendBytes.Length);
 
-        MemoryStream ms = new MemoryStream();
-        byte[] resBytes = new byte[256];
-        int resSize = 0;
-        do
-        {
-            resSize = ns.Read(resBytes, 0, resBytes.Length);
-            if (resSize == 0)
-            {
-                break;
-            }
-            ms.Write(resBytes, 0, resSize);
-        } while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
-        string resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
-		Debug.Log(resMsg);
-		foreach(GameObject masu in GameObject.FindObjectOfType<field>().GetMasuLists)
+		ms = new MemoryStream();
+		resBytes = new byte[256];
+		resSize = 0;
+		do
 		{
-			if(masu.GetComponent<button>().GetID == int.Parse(resMsg.Substring(resMsg.IndexOf(":") + 1)))
+			resSize = ns.Read(resBytes, 0, resBytes.Length);
+			if (resSize == 0)
+			{
+				break;
+			}
+			ms.Write(resBytes, 0, resSize);
+		} while (ns.DataAvailable || resBytes[resSize - 1] != '\n');
+		resMsg = enc.GetString(ms.GetBuffer(), 0, (int)ms.Length);
+		Debug.Log(resMsg);
+		foreach (GameObject masu in GameObject.FindObjectOfType<field>().GetMasuLists)
+		{
+			if (masu.GetComponent<button>().GetID == int.Parse(resMsg.Substring(resMsg.IndexOf(":") + 1)))
 			{
 				GameObject.FindObjectOfType<koma>().SetPos = masu.GetComponent<button>().GetPos;
 				break;
 			}
 		}
 		ms.Close();
-
-        ns.Close();
-        tcp.Close();
-    }
+		ns.Close();
+		tcp.Close();
+	}
 
     public void CreatePlayer()
     {
