@@ -1,0 +1,11 @@
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.deps.json
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.runtimeconfig.json
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.runtimeconfig.dev.json
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.dll
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.pdb
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.csprojAssemblyReference.cache
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.csproj.CoreCompileInputs.cache
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfoInputs.cache
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfo.cs
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.dll
+C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.pdb

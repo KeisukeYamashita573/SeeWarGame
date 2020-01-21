@@ -36,7 +36,6 @@ namespace Server
                 if (!plList.ContainsKey(msg.Substring(msg.IndexOf(":") + 1)))
                 {
                     var address = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
-                    //address = address.Substring(address.IndexOf('.', address.Length - 5));
                     if (!plList.ContainsKey(address))
                     {
                         plList.Add(address, msg.Substring(msg.IndexOf(":") + 1));
