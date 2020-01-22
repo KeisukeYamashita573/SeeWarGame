@@ -9,3 +9,14 @@ C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\net
 C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfo.cs
 C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.dll
 C:\Users\希依\source\repos\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.pdb
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.deps.json
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.runtimeconfig.json
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.runtimeconfig.dev.json
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.dll
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.pdb
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.csprojAssemblyReference.cache
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.csproj.CoreCompileInputs.cache
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfoInputs.cache
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfo.cs
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.dll
+D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.pdb

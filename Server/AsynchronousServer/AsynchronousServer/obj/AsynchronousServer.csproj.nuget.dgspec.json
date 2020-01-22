@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\希依\\source\\repos\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj": {}
+    "D:\\Documents\\SeeWarGame\\Server\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\希依\\source\\repos\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj": {
+    "D:\\Documents\\SeeWarGame\\Server\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\希依\\source\\repos\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj",
+        "projectUniqueName": "D:\\Documents\\SeeWarGame\\Server\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj",
         "projectName": "AsynchronousServer",
-        "projectPath": "C:\\Users\\希依\\source\\repos\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj",
+        "projectPath": "D:\\Documents\\SeeWarGame\\Server\\AsynchronousServer\\AsynchronousServer\\AsynchronousServer.csproj",
         "packagesPath": "C:\\Users\\希依\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\希依\\source\\repos\\AsynchronousServer\\AsynchronousServer\\obj\\",
+        "outputPath": "D:\\Documents\\SeeWarGame\\Server\\AsynchronousServer\\AsynchronousServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
