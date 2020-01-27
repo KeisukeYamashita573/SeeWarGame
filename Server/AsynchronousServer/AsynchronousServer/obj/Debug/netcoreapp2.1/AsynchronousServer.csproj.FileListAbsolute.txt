@@ -20,3 +20,13 @@ D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\n
 D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfo.cs
 D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.dll
 D:\Documents\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.pdb
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.deps.json
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.runtimeconfig.json
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.runtimeconfig.dev.json
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.dll
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\bin\Debug\netcoreapp2.1\AsynchronousServer.pdb
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.csprojAssemblyReference.cache
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfoInputs.cache
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.AssemblyInfo.cs
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.dll
+D:\Documents\network\SeeWarGame\Server\AsynchronousServer\AsynchronousServer\obj\Debug\netcoreapp2.1\AsynchronousServer.pdb

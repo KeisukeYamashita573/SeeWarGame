@@ -6,10 +6,12 @@ using System;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 using System.IO;
 
 public class DataClientManager : MonoBehaviour
 {
+
     [SerializeField]
     private InputField ipField = default;
     [SerializeField]
